@@ -1,0 +1,5 @@
+# secrets
+.envrc
+# build and setup artifacts
+# (need to confirm this playing it safe for now)
+.terraform
