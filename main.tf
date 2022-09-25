@@ -40,7 +40,7 @@ resource "proxmox_vm_qemu" "apoc-vms" {
 
   disk {
     slot = 0
-    size = "10G"
+    size = "32G"
     type = "scsi"
     storage = "local-lvm"
   }
@@ -79,7 +79,7 @@ resource "proxmox_vm_qemu" "mouse-vms" {
 
   disk {
     slot = 0
-    size = "10G"
+    size = "32G"
     type = "scsi"
     storage = "local-lvm"
   }
@@ -118,7 +118,7 @@ resource "proxmox_vm_qemu" "tank-vms" {
 
   disk {
     slot = 0
-    size = "10G"
+    size = "32G"
     type = "scsi"
     storage = "local-lvm"
   }
