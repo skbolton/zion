@@ -81,10 +81,10 @@ resource "proxmox_vm_qemu" "Kubernetes-workers" {
   sshkeys = var.ssh_key
 }
 
-resource "proxmox_vm_qemu" "tank-vms" {
-  count = 2
-  name = "tank-${count.index + 1}"
-  desc = "Testing out Terraform apply"
+resource "proxmox_vm_qemu" "couchdb-cluster" {
+  count = 3
+  name = "couch-${count.index + 1}"
+  desc = "CouchDB cluster node"
   onboot = true
 
   target_node = "tank"
@@ -92,7 +92,7 @@ resource "proxmox_vm_qemu" "tank-vms" {
 
   agent = 1
   os_type = "cloud-init"
-  cores = 2
+  cores = 1
   sockets = 1
   cpu = "host"
   memory = 2048
@@ -122,3 +122,4 @@ resource "proxmox_vm_qemu" "tank-vms" {
   ciuser = "serveradmin"
   sshkeys = var.ssh_key
 }
+
