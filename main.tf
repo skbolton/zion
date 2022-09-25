@@ -2,7 +2,6 @@ resource "proxmox_vm_qemu" "apoc-vms" {
   count = 2
   name = "apoc-${count.index + 1}"
   desc = "Testing out Terraform apply"
-  pool = "pool0"
 
   target_node = "apoc"
   clone = "ubuntu-2204-cloudinit"
@@ -46,7 +45,6 @@ resource "proxmox_vm_qemu" "mouse-vms" {
   count = 2
   name = "mouse-${count.index + 1}"
   desc = "Testing out Terraform apply"
-  pool = "pool0"
 
   target_node = "mouse"
   clone = "ubuntu-2204-cloudinit"
@@ -90,7 +88,6 @@ resource "proxmox_vm_qemu" "tank-vms" {
   count = 2
   name = "tank-${count.index + 1}"
   desc = "Testing out Terraform apply"
-  pool = "pool0"
 
   target_node = "tank"
   clone = "ubuntu-2204-cloudinit"
