@@ -3,3 +3,5 @@
 # build and setup artifacts
 # (need to confirm this playing it safe for now)
 .terraform
+# debug logging for proxmox provider
+terraform-plugin-proxmox.log
